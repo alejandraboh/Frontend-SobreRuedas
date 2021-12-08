@@ -1,0 +1,75 @@
+<br>
+<br>
+
+<h3>Buscar vehículo Nuevo</h3>
+<br>
+<a class="btn btn-primary" routerLink="/vehiculos/buscar-vehiculos">Buscar Vehículo</a>
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Marca
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                Referencia
+            </th>
+            <th>
+                Valor
+            </th>
+            <th>
+                Url_foto
+            </th>
+            <th>
+                Url_Youtube
+            </th>
+
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of buscarNuevoVehiculo">
+            <th>
+                {{v.id}}
+            </th>
+            <th>
+                {{v.Estado}}
+            </th>
+            <th>
+                {{v.Marca}}
+            </th>
+            <th>
+                {{v.Modelo}}
+            </th>
+            <th>
+                {{v.Referencia}}
+            </th>
+            <th>
+                {{v.Valor}}
+            </th>
+            <th>
+                {{v.Url_foto}}
+            </th>
+            <th>
+                {{v.Url_Youtube}}
+            </th>
+
+            <td>
+                <a class="btn btn-primary" routerLink="/vehiculos/editar-vehiculo/{{v.id}}">Editar</a>
+                <a class="btn btn-danger" routerLink="/vehiculos/eliminar-vehiculo/{{v.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

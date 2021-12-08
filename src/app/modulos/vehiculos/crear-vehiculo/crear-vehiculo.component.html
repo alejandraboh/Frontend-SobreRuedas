@@ -1,0 +1,37 @@
+<form [formGroup]="fgValidador" (ngSubmit)="GuardarVehiculo()" class="row g-3">
+    <div class="col-md-2">
+        <label for="txtestado" class="form-label">Estado Vehículo</label>
+        <input type="text" name="txtestado" class="form-control" formControlName="estado">
+    </div>
+    <div class="col-md-2">
+        <label for="txtmarca" class="form-label">Marca</label>
+        <input type="text" name="txtmarca" class="form-control" formControlName="marca">
+    </div>
+    <div class="col-md-2">
+        <label for="txtreferencia" class="form-label">Referencia</label>
+        <input type="text" name="txtreferencia" class="form-control" formControlName="referencia">
+    </div>
+    <div class="col-md-2">
+        <label for="txtvalor" class="form-label">Valor</label>
+        <input type="text" name="txtvalor" class="form-control" formControlName="valor">
+    </div>
+
+    <div class="col-md-2">
+        <label for="txtmodelo" class="form-label">Modelo</label>
+        <input type="text" name="txtmodelo" class="form-control" formControlName="modelo">
+    </div>
+    <div class="col-md-2">
+        <label for="txturl_foto" class="form-label">Url_foto</label>
+        <input type="text" name="txturl_foto" class="form-control" formControlName="url_foto">
+    </div>
+    <div class="col-md-2">
+        <label for="txturl_youtube" class="form-label">Url_Youtube</label>
+        <input type="text" name="txturl_youtube" class="form-control" formControlName="url_youtube">
+    </div>
+
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Crear vehículo</button>
+        <a class="btn btn-light" routerLink="/vehiculos/crear-vehiculos">Atrás</a>
+    </div>
+</form>
