@@ -45,8 +45,8 @@ export class CrearVehiculoComponent implements OnInit {
     v.Modelo=modelo;
     v.Referencia=referencia;
     v.Valor=valor;
-   v.Url_foto=Url_foto;
-   v.Url_Youtube=Url_Youtube;
+    v.Url_foto=Url_foto;
+    v.Url_Youtube=Url_Youtube;
      
 
     this.servicioVehiculo.CrearVehiculo(v).subscribe((datos:ModeloVehiculo)=>{

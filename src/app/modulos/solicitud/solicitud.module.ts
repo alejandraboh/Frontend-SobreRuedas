@@ -7,6 +7,7 @@ import { EditarSolicitudComponent } from './editar-solicitud/editar-solicitud.co
 import { EliminarSolicitudComponent } from './eliminar-solicitud/eliminar-solicitud.component';
 import { BuscarSolicitudComponent } from './buscar-solicitud/buscar-solicitud.component';
 import { DetalleSolicitudComponent } from './detalle-solicitud/detalle-solicitud.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { DetalleSolicitudComponent } from './detalle-solicitud/detalle-solicitud
   ],
   imports: [
     CommonModule,
-    SolicitudRoutingModule
+    SolicitudRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SolicitudModule { }
