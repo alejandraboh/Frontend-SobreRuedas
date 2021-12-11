@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { ClienteRoutingModule } from './cliente-routing.module';
+import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { EditarClienteComponent } from './editar-cliente/editar-cliente.component';
+import { EliminarClienteComponent } from './eliminar-cliente/eliminar-cliente.component';
+import { BuscarClienteComponent } from './buscar-cliente/buscar-cliente.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+@NgModule({
+  declarations: [
+    CrearClienteComponent,
+    EditarClienteComponent,
+    EliminarClienteComponent,
+    BuscarClienteComponent
+  ],
+  imports: [
+    CommonModule,
+    ClienteRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ]
+})
+export class ClienteModule { }

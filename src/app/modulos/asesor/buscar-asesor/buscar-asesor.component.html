@@ -1,0 +1,54 @@
+<br>
+<br>
+
+<h3>Buscar Asesor </h3>
+<br>
+<a class="btn btn-primary" routerLink="/asesor/buscar-asesor">Buscar Asesor</a>
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Estado
+            </th>
+            <th>
+                Usuario
+            </th>
+            <th>
+                Contrasena
+            </th>
+            <th>
+                Nombre_Completo
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of buscarAsesor">
+            <th>
+                {{a.id}}
+            </th>
+            <th>
+                {{a.Estado}}
+            </th>
+            <th>
+                {{a.Usuario}}
+            </th>
+            <th>
+                {{a.Contrasena}}
+            </th>
+            <th>
+                {{a.Nombre_Completo}}
+            </th>
+
+            <td>
+                <a class="btn btn-primary" routerLink="/asesor/editar-asesor/{{a.id}}">Editar</a>
+                <a class="btn btn-danger" routerLink="/asesor/eliminar-asesor/{{a.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

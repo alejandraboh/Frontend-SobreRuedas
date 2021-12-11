@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <img class="mb-4" src="https://i.ibb.co/K0nf1Gw/Header-Logo-blanco.png" alt="" width="" height="57">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/vehiculos" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Vehículos</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" routerLink="/vehiculos/buscar-vehiculo">buscar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/vehiculos/cotizar-vehiculo">Cotizar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/Administrador" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Administrador</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/asesor/crear-asesor">Gestionar Asesor</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/cliente/buscar-cliente">Gestionar Cliente</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/solicitud/buscar-solicitud">Gestionar Solicitudes</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/administrador/crear-sucursal">Gestionar Sucursal</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/vehiculo/crear-vehiculo">Gestionar Vehículos</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/informes/crear-informes">Generar Informes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/asesor" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Asesor</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a *ngIf="!autenticado" class="dropdown-item"  routerLink="/asesor/buscar-informes-fecha">Gestionar Informes</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item"  routerLink="/asesor/buscar-solicitud">Buscar Solicitudes</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item"  routerLink="/asesor/buscar-vehiculo">Gestionar Vehiculos</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item"  routerLink="/asesor/editar-estado-solicitud">Gestionar Estado de la Solicitud</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/cliente" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cliente</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/vehiculos/buscar-vehiculos">Cotizar Vehiculo</a></li>
+              <li><a *ngIf="!autenticado" class="dropdown-item" routerLink="/solicitud/buscar-solicitud">Gestionar Solicitudes</a></li>              
+            </ul>
+          </li> 
+
+          <li><a class="nav-link" routerLink="/contactenos/formulario">Contáctenos</a></li>
+          <li><a *ngIf="!autenticado" class="nav-link" routerLink="/seguridad/login">Iniciar Sesión</a></li>
+          <li><a *ngIf="autenticado" class="nav-link" routerLink="/seguridad/logout">Cerrar Sesión</a></li>
+                               
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-success" type="submit" routerLink="/registro">Regístrate</button>
+        </form>
+      </div>
+    </div>
+  </nav>

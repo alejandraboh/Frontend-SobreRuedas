@@ -1,0 +1,53 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de registro</title> 
+  </head>
+
+<body>  
+  <div class="contact_form">
+
+    <div class="registro">      
+      <h1>Formulario de registro</h1>
+        <h3>Diligencia los siguientes campos:</h3>
+
+
+          <form action="submeter-formulario.php" method="post">       
+
+            
+                <p>
+                  <label for="nombre_completo" class="nombre_completo">Nombre Completo
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tus nombres">
+                </p>
+              
+                <p>
+                  <label for="email" class="colocar_email">Correo electrónico
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Correo">
+                </p>
+            
+                <p>
+                  <label for="telefone" class="colocar_telefono">Teléfono
+                  </label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                </p>                  
+              
+                <button [disabled]="!fgValidador.valid" class="w-100 btn btn-lg
+                btn-primary" type="submit"
+                (click)="registro()">Enviar</button><br>                
+
+                <p class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>          
+            
+          </form>
+    </div>  
+  </div>
+
+</body>
+</html>
+
+

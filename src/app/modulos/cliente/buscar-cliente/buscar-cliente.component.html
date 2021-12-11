@@ -1,0 +1,45 @@
+<br>
+<br>
+
+<h3>Buscar Cliente </h3>
+<br>
+<a class="btn btn-primary" routerLink="/cliente/buscar-cliente">Buscar Cliente</a>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                id
+            </th>
+            <th>
+                Nombre_Completo
+            </th>
+            <th>
+                Usuario
+            </th>
+            <th>
+                rol
+            </th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of buscarCliente">
+            <th>
+                {{c.id}}
+            </th>
+            <th>
+                {{c.Nombre_Completo}}
+            </th>
+            <th>
+                {{c.Usuario}}
+            </th>
+            <th>
+                {{c.rol}}
+            </th>
+            <td>
+                <a class="btn btn-primary" routerLink="/cliente/editar-cliente/{{c.id}}">Editar</a>
+                <a class="btn btn-danger" routerLink="/cliente/eliminar-cliente/{{c.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
